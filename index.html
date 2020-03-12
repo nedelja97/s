@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Ibarra+Real+Nova:400,400i,700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    
+</head>
+
+<body>
+
+    
+        <div class="row">
+            <form id="myForm" action="" method="GET">
+                <fieldset>
+                    <legend>Form</legend>
+                    
+                    Your Cloud Provider:
+                            <select name="Cloud Provider" id="cloudProvider">
+                                <option value="none" disabled> --- Cloud Provider ---</option>
+                                <option value="oracle">Oracle</option>
+                                <option value="azure">Azure</option>
+                                <option value="google">Google</option>
+                            </select>
+                              
+                            <ion-icon name="help-circle-outline"></ion-icon>
+
+                                    
+                            <br>
+                    Instance type:
+                            <select name="Instance type" id="instance">
+                                <option value="0" disabled> --- Instance Type ---</option>
+                            
+                            </select>
+                            <ion-icon name="help-circle-outline"></ion-icon>
+                    <br>
+                    Number of hours per month: <input type="text" class="time">
+                    <ion-icon name="help-circle-outline"></ion-icon>
+                    <br>
+                    Workload type:
+                        <select name="Workload Type" id="workload">
+                                <option value="0" disabled> --- Workload ---</option>      
+                        </select>    
+                        <ion-icon name="help-circle-outline"></ion-icon>
+                    <br>
+                    Evaluation period:
+                        <select name="Evaluation period" id="evaluationPeriod">
+                            <option value="0" disabled> --- Evaluation period ---</option> 
+                            <option value="1">1 month</option>
+                            <option value="12">1 year</option>
+                            <option value="36">3 years</option>
+                        </select>    
+                        <ion-icon name="help-circle-outline"></ion-icon>
+                        <br>
+                </fieldset>
+            </form>
+        </div>
+      <br>
+        <div id="calculation">
+            <div class="result">
+                <button onclick="myFunction()">Total cost</button> 
+                <p id="demo1"></p>
+            </div>
+            <div class="result">
+                <p onclick="myFunction()">Total cost with GraalVM</p>
+                <p id="demo"></p>
+            </div>
+            <div class="result">
+                <p onclick="myFunction()">Budget Decrease</p> 
+                <p id="demo2"></p>
+            </div>          
+        </div>
+    
+        
+          
+
+   
+    
+    
+
+    <script src="script.js"></script> 
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    
+</body>
+
+</html>
